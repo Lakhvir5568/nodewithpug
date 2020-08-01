@@ -155,6 +155,18 @@ app.get('/update_product',function(req,res){
   });
 });
 
+MongoClient.connect(url, function(err, db) {
+        if (err) throw err;
+        var dbo = db.db("mydb1");
+        var id=req.body['id'];
+        
+        dbo.collection("product-data").find({ _id: new mongodb.ObjectId(id) }).toArray(function(err, result) {
+            if (err) throw err;
+            console.log(result);
+            db.close();
+            res.render('pages/edit_product',{items:result})
+          });
+      });
 })
 	// basic page load
 /*app.get('/', (req, res) => {
