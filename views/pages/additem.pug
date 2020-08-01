@@ -1,0 +1,45 @@
+doctype html
+<html(lang='en')>
+	<head>
+		title Hello, World!
+		link(rel='stylesheet', href='/css/stylecss.css')
+	</head>
+	<body>
+		<div class='fulldiv'>
+			// calling Header
+			include /header
+			<div class='allproductdiv'>
+				<div class='allproduct-innerdiv'>
+				
+					<div class='addproduct-centerdiv'>
+						<div class='detailheaderdiv'>
+							<p class='detailheadertxt'>  Add Product </p>
+						</div>
+						<form action='/addData' method='post'>
+							<div class='adddetail-inputdiv'>
+								<p class='adddetail-inputtxt'> Product Name </p>
+								<input type='text' class='adddetail-inputstyle' id='product' name='product' placeholder='product name' >
+							</div>
+							<div class='adddetail-inputdiv'>
+								<p class='adddetail-inputtxt'> Add  Price </p>
+								<input type='text' class='adddetail-inputstyle' id='price' name='price' placeholder='Price in Dollor'>
+							</div>
+							<div class='adddetail-inputdiv'>
+								<p class='adddetail-inputtxt'> Add Photo </p>
+								<input type='file'  id='' name=''>
+							</div>
+							<div class='adddetail-inputdiv'>
+								<button class='adddetail-submitbtn'> Submit </button>
+							</div>
+						</form>
+					</div>
+					
+					
+					
+				</div>
+			</div>	
+			// calling Footer
+			include /footer	
+		</div>
+	</body>
+</html>

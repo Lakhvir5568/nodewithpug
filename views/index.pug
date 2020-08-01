@@ -1,0 +1,38 @@
+doctype html
+<html(lang='en')>
+	<head>
+		title Hello, World!
+		link(rel='stylesheet', href='/css/stylecss.css')
+	</head>
+	<body>
+		<div class='fulldiv'>
+			// calling Header
+			include /header
+			<div class='allproductdiv'>
+				<div class='allproduct-innerdiv'>
+				each n in items
+					<div class='productmaindiv'>
+						<img src='images/feature-pic1.jpg' class='productmain-pic'>
+						<div class='productmain-detaildiv'>
+							<p class='productmain-txt'>
+								span=n.product 
+							</p>
+						</div>
+						<div class='productmain-pricediv'>
+							<p class='productmain-pricetxt'> 
+								span= n.price 
+							</p>
+						</div>
+						<button class='productmain-buybtn'>
+							Item Buy 
+						</button>
+					</div>
+					
+					
+				</div>
+			</div>	
+			// calling Footer
+			include /footer	
+		</div>
+	</body>
+</html>

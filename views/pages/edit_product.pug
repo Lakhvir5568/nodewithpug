@@ -1,0 +1,47 @@
+doctype html
+<html(lang='en')>
+	<head>
+		title Hello, World!
+		link(rel='stylesheet', href='/css/stylecss.css')
+	</head>
+	<body>
+		<div class='fulldiv'>
+			// calling Header
+			include /header
+			<div class='allproductdiv'>
+				<div class='allproduct-innerdiv'>
+				
+					<div class='addproduct-centerdiv'>
+						<div class='detailheaderdiv'>
+							<p class='detailheadertxt'>  Edit Product </p>
+						</div>
+						<form action='/update_product' method='post'>
+						each n in items
+							<div class='adddetail-inputdiv'>
+								<p class='adddetail-inputtxt'> Product Name </p>
+								input(class='adddetail-inputstyle', type='text', placeholder='Product',  name='product' value=`${n.product}`)
+							</div>
+							<div class='adddetail-inputdiv'>
+								<p class='adddetail-inputtxt'> Edit  Price </p>
+								input(class='adddetail-inputstyle', type='text', placeholder='Price',  name='price' value=`${n.price}`)
+								input(class='adddetail-inputstyle', type='hidden', placeholder='id',  name='id' value=`${n._id}`)
+							</div>
+							<div class='adddetail-inputdiv'>
+								<p class='adddetail-inputtxt'> Edit Photo </p>
+								<input type='file'  id='' name=''>
+							</div>
+							<div class='adddetail-inputdiv'>
+								<button class='adddetail-submitbtn'> Submit </button>
+							</div>
+						</form>
+					</div>
+					
+					
+					
+				</div>
+			</div>	
+			// calling Footer
+			include /footer	
+		</div>
+	</body>
+</html>
